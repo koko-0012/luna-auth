@@ -2,6 +2,12 @@
 
 Full source is kept here, including the MIT-licensed EasyAuth fork. No Discord bot token belongs in a Minecraft server.
 
+## Discord Bot and Dashboard
+
+Use the Luna dashboard to invite the bot and test the Minecraft integration. https://luna.141.227.152.160.sslip.io/
+
+Luna Auth lets online and offline players play together, with authentication protection for offline accounts and Discord account linking.
+
 ## Support
 
 | Build | Minecraft | Dependencies | Status |
