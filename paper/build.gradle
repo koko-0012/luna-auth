@@ -1,0 +1,13 @@
+plugins { id 'java' }
+repositories { mavenCentral(); maven { url 'https://hub.spigotmc.org/nexus/content/repositories/snapshots/' } }
+dependencies { compileOnly 'org.spigotmc:spigot-api:1.20.1-R0.1-SNAPSHOT'; implementation 'com.google.code.gson:gson:2.10.1' }
+sourceSets.main.java.srcDir('../common/src/main/java')
+java { sourceCompatibility=JavaVersion.VERSION_17; targetCompatibility=JavaVersion.VERSION_17 }
+tasks.withType(JavaCompile).configureEach { options.encoding='UTF-8'; options.release=17 }
+jar { archiveBaseName='luna-bridge-paper'; archiveVersion='0.1.2'; from { configurations.runtimeClasspath.collect { it.isDirectory()?it:zipTree(it) } }; duplicatesStrategy=DuplicatesStrategy.EXCLUDE }
+jar { from('../LICENSE') }
+
+repositories { mavenCentral() }
+sourceSets.test.java.srcDir("../common/src/test/java")
+dependencies { testImplementation "org.junit.jupiter:junit-jupiter:5.11.4"; testRuntimeOnly "org.junit.platform:junit-platform-launcher" }
+test { useJUnitPlatform() }

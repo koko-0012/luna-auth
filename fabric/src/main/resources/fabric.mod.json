@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "id": "easyauth",
+  "version": "${version}",
+  "name": "Luna Auth",
+  "description": "EasyAuth fork with outbound Luna pairing and Discord account verification. Do not install alongside EasyAuth or Violet Auth.",
+  "authors": [
+    "NikitaCartes",
+    "samo_lego"
+  ],
+  "contact": {
+    "homepage": "https://github.com/koko-0012/luna-auth",
+    "sources": "https://github.com/koko-0012/luna-auth",
+    "issues": "https://github.com/koko-0012/luna-auth/issues"
+  },
+  "license": "MIT",
+  "environment": "server",
+  "entrypoints": {
+    "main": [
+      "xyz.nikitacartes.easyauth.EasyAuth",
+      "io.lunabot.fabric.LunaFabric"
+    ]
+  },
+  "accessWidener": "easyauth.accesswidener",
+  "mixins": [
+    "easyauth.mixins.json"
+  ],
+  "depends": {
+    "fabric-api": "*",
+    "fabricloader": "*",
+    "minecraft": ">=1.20 <1.20.2",
+    "fabric-permissions-api-v0": "*"
+  },
+  "suggests": {
+    "luckperms": "*"
+  }
+}

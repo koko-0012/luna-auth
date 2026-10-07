@@ -1,0 +1,11 @@
+name: LunaBridge
+version: 0.1.2
+main: io.lunabot.paper.LunaPaper
+api-version: '1.20'
+depend: [AuthMe]
+description: Outbound Luna panel connector. Authentication data stays in AuthMe.
+commands:
+  luna:
+    description: Pair and manage your Luna connector
+  link:
+    description: Verify your Discord account privately
